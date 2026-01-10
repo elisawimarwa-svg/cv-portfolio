@@ -3,50 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio Marketing Digital | ESTS</title>
+    <title>Marwa Elaissaoui | Portfolio Marketing Digital</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; }
-        header { background: #2c3e50; color: white; padding: 1rem; text-align: center; }
-        nav { display: flex; justify-content: center; background: #ecf0f1; padding: 10px; }
-        nav a { margin: 0 15px; text-decoration: none; color: #2c3e50; font-weight: bold; }
-        section { padding: 20px; max-width: 800px; margin: auto; }
-        .hero { text-align: center; background: #f4f4f4; padding: 40px 20px; }
-        footer { text-align: center; padding: 20px; background: #2c3e50; color: white; position: fixed; width: 100%; bottom: 0; }
+        :root {
+            --primary: #2c3e50; /* Bleu foncé pro */
+            --accent: #3498db;  /* Bleu marketing */
+            --light: #ecf0f1;
+            --text: #333;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; color: var(--text); background-color: #f9f9f9; }
+        
+        /* Header & Photo */
+        header { background: var(--primary); color: white; padding: 60px 20px; text-align: center; }
+        .profile-img { 
+            width: 180px; height: 180px; border-radius: 50%; border: 5px solid white; 
+            object-fit: cover; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        nav { background: white; padding: 15px; text-align: center; position: sticky; top: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 1000; }
+        nav a { margin: 0 20px; text-decoration: none; color: var(--primary); font-weight: bold; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+
+        section { max-width: 900px; margin: 40px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+        h2 { color: var(--primary); border-left: 5px solid var(--accent); padding-left: 15px; }
+
+        /* Grilles pour compétences */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { background: var(--light); padding: 15px; border-radius: 5px; }
+        .tag { background: var(--accent); color: white; padding: 5px 10px; border-radius: 15px; font-size: 0.8em; margin-right: 5px; }
+
+        footer { text-align: center; padding: 40px; background: var(--primary); color: white; margin-top: 50px; }
+        .contact-info { margin-top: 10px; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Étudiante Marketing Digital - ESTS</h1>
+        <img src="profile-marwa.jpg" alt="Marwa Elaissaoui" class="profile-img">
+        <h1>Marwa Elaissaoui</h1>
+        <p>Étudiante en DUT Marketing Digital & Communication à l'ESTS</p>
     </header>
 
     <nav>
-        <a href="#projets">Projets</a>
-        <a href="#competences">Compétences</a>
+        <a href="#propos">À Propos</a>
+        <a href="#experience">Expériences</a>
+        <a href="#projets">Projets Académiques</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <div class="hero">
-        <h2>Bienvenue sur mon espace professionnel</h2>
-        <p>Spécialiste en SEO, Social Media et Stratégie de Contenu.</p>
-    </div>
-
-    <section id="projets">
-        <h3>Mes Projets Récents</h3>
-        <ul>
-            <li>Analyse de campagne Google Ads</li>
-            <li>Gestion de communauté Instagram</li>
-            <li>Audit SEO pour une PME locale</li>
-        </ul>
+    <section id="propos">
+        <h2>À Propos de Moi</h2>
+        <p>Passionnée par le monde du digital, j'aime créer du contenu, analyser les tendances et trouver des idées innovantes. Mon objectif est de combiner créativité et stratégie pour donner vie à des projets ayant un réel impact.</p>
+        <div class="grid">
+            <div class="card">
+                <strong>Outils :</strong><br>
+                <span class="tag">Canva</span> <span class="tag">Word</span> <span class="tag">PowerPoint</span>
+            </div>
+            <div class="card">
+                <strong>Langues :</strong><br>
+                Français (Maîtrisé), Arabe (Maternel)
+            </div>
+        </div>
     </section>
 
-    <section id="competences">
-        <h3>Compétences Clés</h3>
-        <p>SEO / SEM, Email Marketing, Data Analytics, Canva & Copywriting.</p>
+    <section id="experience">
+        <h2>Expérience Professionnelle</h2>
+        <div>
+            <h3>Stage d'Observation - DGAC</h3>
+            <p><em>Mai 2025 - Juin 2025</em></p>
+            <ul>
+                <li>Gestion administrative et financière de projets aéronautiques.</li>
+                <li>Contrôle de conformité et validation des dossiers.</li>
+                <li>Suivi comptable et mise à jour des rapports de gestion.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projets">
+        <h2>Projets Académiques (ESTS)</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Stratégie Samsung</h3>
+                <p>Repositionnement de la marque Samsung vers le segment premium.</p>
+            </div>
+            <div class="card">
+                <h3>E-commerce & Business Plan</h3>
+                <p>Création de contenus digitaux et élaboration de business plans pour de nouveaux produits.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Actuellement à la recherche d'un stage d'initiation pour mettre mes compétences au service de votre entreprise.</p>
+        <p>📍 Sala Aljadida, Maroc</p>
+        <p>📧 elisawimarwa@gmail.com</p>
+        <p>📞 +212 622 623 706</p>
     </section>
 
     <footer>
-        <p>&copy; 2026 - Mon Nom - DUT Marketing Digital ESTS</p>
+        <p>&copy; 2026 Marwa Elaissaoui - Future Experte en Marketing Digital</p>
     </footer>
 
 </body>
